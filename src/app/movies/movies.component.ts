@@ -4,6 +4,7 @@ import {NgRedux, select} from '@angular-redux/store';
 import {IAppState} from '../store';
 import {ActionTypes} from '../actions/movies.actions';
 import {Movie} from '../movie';
+import {GenreType} from '../movie.model';
 
 @Component({
   selector: 'app-movies',
@@ -15,6 +16,7 @@ export class MoviesComponent implements OnInit {
   @select() loading$;
   filteredMovies: Movie[];
   filters;
+  genreTypes: GenreType[] = ['action', 'adventure', 'biography', 'comedy', 'crime', 'drama', 'history', 'mystery', 'scifi', 'sport', 'thriller'];
   movies: Movie[];
 
   constructor(private ngRedux: NgRedux<IAppState>) {
