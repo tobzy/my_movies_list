@@ -1,0 +1,120 @@
+@import "~sass/_mixins";
+
+.movie-title{
+  margin: 17px 0;
+}
+.movies-list {
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 2.5rem;
+
+  .movie, .movie-header{
+    transition: background-color 0.2s ease;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: 0.1rem solid #e1e1e1;
+
+    div{
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      display: inline-block;
+    }
+
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &.selected{
+      background-color: #74bdde !important;
+      color: white;
+
+      .movie-name{
+        padding-left: 10px;
+      }
+
+      .movie-rate{
+        padding-right: 10px;
+      }
+    }
+
+    .movie-name{
+      width:30%;
+      padding-left: 0;
+      @include respond-to('large') {
+        width: 45%;
+      }
+      @include respond-to('medium') {
+        width: 85%;
+      }
+      @include respond-to('small') {
+        width: 100%;
+      }
+    }
+    .movie-key{
+      width:40%;
+      @include respond-to('medium') {
+        display: none;
+      }
+    }
+    .movie-length{
+      width:15%;
+      @include respond-to('large') {
+        display: none;
+      }
+    }
+    .movie-rate{
+      width:13%;
+      padding-right: 0;
+      text-align: right;
+      @include respond-to('large') {
+        width: 12%;
+      }
+      @include respond-to('small') {
+        display: none;
+      }
+    }
+  }
+  .movie-header{
+    font-weight: bold;
+  }
+  .movie:hover{
+    background: lightcoral;
+    color: white;
+    transform: scale(1.02);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.filters{
+  margin-bottom: 20px;
+  h5{
+    font-size: 0.8em;
+    margin: 0;
+  }
+  span{
+    margin: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    &:first-of-type{
+      margin-left: 0;
+    }
+    &.active{
+      color: lightcoral;
+      font-weight: 600;
+    }
+  }
+  button{
+    border: none;
+    background: lightcoral;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:focus{
+      outline:none
+    }
+  }
+}
+

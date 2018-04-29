@@ -1,0 +1,34 @@
+@import './variables';
+@import './mixins';
+
+html {
+  body{
+    color: #606c76;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+  }
+  font-size: 62.5%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid lightcoral;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 60px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
