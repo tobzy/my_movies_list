@@ -32,7 +32,8 @@ export class MovieDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // subscribing here because the *ngIf doesn't react to the subject @select creates (i.e the selectedMovie$ variable)☹
+    // subscribe to the selectedMovies$ subject(provided by angular redux from the store)
+    // and create an instance property movie.
     this.selectedMovie$.asObservable().subscribe(e => {
       this.movie = e;
     });

@@ -15,6 +15,8 @@ export class MoviesEpics {
   constructor(private http: HttpClient) {
   }
 
+  // I'm using epics from redux-observable so that I can use use the
+  // middleware to resolve observables returned from my http calls.
   getMovies = (action$) => {
     return action$.ofType(ActionTypes.FetchMovies)
       .mergeMap(() => {

@@ -1,6 +1,10 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 import {MoviesComponent} from './movies.component';
+import {MovieSearchComponent} from '../movie-search/movie-search.component';
+import {NgReduxModule} from '@angular-redux/store';
+
 
 describe('MoviesComponent', () => {
   let component: MoviesComponent;
@@ -8,7 +12,8 @@ describe('MoviesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MoviesComponent]
+      declarations: [MoviesComponent, MovieSearchComponent],
+      imports: [RouterTestingModule , NgReduxModule]
     })
       .compileComponents();
   }));
@@ -22,11 +27,4 @@ describe('MoviesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should render title in a h2 tag', async(() => {
-    fixture = TestBed.createComponent(MoviesComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h2').textContent).toContain('My Movie List');
-  }));
 });

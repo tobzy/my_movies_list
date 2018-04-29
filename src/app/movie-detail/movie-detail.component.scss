@@ -1,3 +1,5 @@
+@import "~sass/_mixins";
+
 .movie-cover {
   float: left;
   margin: 0 20px 20px 0;
@@ -10,6 +12,9 @@
 }
 
 .movie-details {
+  @include respond-to('600px breakpoint') {
+    clear: both;
+  }
   div {
     margin-bottom: 20px;
     span {

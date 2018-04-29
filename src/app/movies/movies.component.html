@@ -2,13 +2,13 @@
 <app-movie-search></app-movie-search>
 <div class="filters">
   <h5>Filter by Genre</h5>
-  <span (click)="filterMovies('action')" [class]="filters.has('action')?'active':''">Action</span>
-  <span (click)="filterMovies('adventure')" [class]="filters.has('adventure')?'active':''">Adventure</span>
-  <span (click)="filterMovies('biography')" [class]="filters.has('biography')?'active':''">Biography</span>
-  <span (click)="filterMovies('comedy')" [class]="filters.has('comedy')?'active':''">Comedy</span>
-  <span (click)="filterMovies('crime')" [class]="filters.has('crime')?'active':''">Crime</span>
-  <span (click)="filterMovies('drama')" [class]="filters.has('drama')?'active':''">Drama</span>
-  <span (click)="filterMovies('history')" [class]="filters.has('history')?'active':''">History</span>
+  <span (click)="onFilterChange('action')" [class]="filters.has('action')?'active':''">Action</span>
+  <span (click)="onFilterChange('adventure')" [class]="filters.has('adventure')?'active':''">Adventure</span>
+  <span (click)="onFilterChange('biography')" [class]="filters.has('biography')?'active':''">Biography</span>
+  <span (click)="onFilterChange('comedy')" [class]="filters.has('comedy')?'active':''">Comedy</span>
+  <span (click)="onFilterChange('crime')" [class]="filters.has('crime')?'active':''">Crime</span>
+  <span (click)="onFilterChange('drama')" [class]="filters.has('drama')?'active':''">Drama</span>
+  <span (click)="onFilterChange('history')" [class]="filters.has('history')?'active':''">History</span>
   <button (click)="clearFilters()">Clear Filters</button>
 </div>
 
