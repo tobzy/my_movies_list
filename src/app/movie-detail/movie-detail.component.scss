@@ -1,0 +1,21 @@
+.movie-cover {
+  float: left;
+  margin: 0 20px 20px 0;
+  box-shadow: 4px 6px 27px 5px;
+}
+
+.back-arrow{
+  width: 20px;
+  vertical-align: middle;
+}
+
+.movie-details {
+  div {
+    margin-bottom: 20px;
+    span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+
+}

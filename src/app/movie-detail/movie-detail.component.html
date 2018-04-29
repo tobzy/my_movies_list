@@ -1,0 +1,16 @@
+<div (click)="goBack()" style="cursor: pointer">
+  <img src='./assets/images/back-button.svg' class="back-arrow">
+  <span>Go Back</span>
+</div>
+<div *ngIf="movie.name">
+  <h4>{{ movie.name }}</h4>
+  <img [src]="movie.imageUrl" class="movie-cover">
+  <div class="movie-details">
+    <div><span>Name: </span>{{movie.name}}</div>
+    <div><span>Description: </span>{{movie.description}}</div>
+    <div><span>Genres: </span>{{movie.genres}}</div>
+    <div><span>Length: </span>{{movie.length}}</div>
+    <div><span>Rate: </span>{{movie.rate}}</div>
+  </div>
+</div>
+<div class="loader" *ngIf="loading$ | async"></div>
