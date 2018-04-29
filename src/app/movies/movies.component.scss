@@ -94,12 +94,9 @@
     margin: 0;
   }
   span{
-    margin: 10px;
+    margin-right: 20px;
     font-size: 12px;
     cursor: pointer;
-    &:first-of-type{
-      margin-left: 0;
-    }
     &.active{
       color: lightcoral;
       font-weight: 600;
