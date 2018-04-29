@@ -2,7 +2,7 @@
 ### My Movies Collection
 A movies collection application that lists all movies in collection and allows users to search for a particular movie. When a user clicks on any movie on the list, a page shows the details for that movie.
 
-####Demo
+#### Demo
 A demo for this application can be found [here](http://my-movies-collection.surge.sh/).
 
 #### Tools:
